@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c5119a35-93ae-4df0-a80d-6eeb37dbf445" name="Default Changelist" comment="" />
+    <list default="true" id="c5119a35-93ae-4df0-a80d-6eeb37dbf445" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/online-shop/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/online-shop/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/online-shop/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/online-shop/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/online-shop/src/components/ProductComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/online-shop/src/components/ProductComponent.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/online-shop/src/components/ProductDetails.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/online-shop/src/components/ProductDetails.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/online-shop/src/components/ProductList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/online-shop/src/components/ProductList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/online-shop/src/models/Product.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/online-shop/src/models/Product.tsx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,6 +42,9 @@
       <option name="presentableId" value="Default" />
       <updated>1618934117250</updated>
       <workItem from="1618934119176" duration="26000" />
+      <workItem from="1619427592963" duration="23000" />
+      <workItem from="1619427623112" duration="3000" />
+      <workItem from="1619427699763" duration="18000" />
     </task>
     <servers />
   </component>
@@ -49,5 +61,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

@@ -32,7 +32,7 @@ function ProductComponent(props: ProductDetailsInterface) {
       />
       <CardMedia
         style={{ padding: "110px" }}
-        image={props.currentProduct.image}
+        image={props.currentProduct.imageURL}
         title={props.currentProduct.name}
       />
       <CardContent>

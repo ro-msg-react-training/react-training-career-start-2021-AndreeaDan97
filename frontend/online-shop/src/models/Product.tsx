@@ -3,24 +3,33 @@ import React from "react";
 export default class Product {
   id: number;
   name: string;
-  category: string;
-  image: string;
-  price: number;
   description: string;
+  price: number;
+  weight: number;
+  imageURL: string;
+  nameOfCategory: string;
+  descriptionOfCategory: string;
+  nameOfSupplier: string;
 
   constructor(
     id: number,
     name: string,
     category: string,
-    image: string,
+    imageURL: string,
     price: number,
-    description: string
+    description: string,
+    weight: number,
+    descriptionOfCategory: string,
+    nameOfSupplier: string
   ) {
     this.id = id;
     this.name = name;
-    this.category = category;
-    this.image = image;
+    this.nameOfCategory = category;
+    this.imageURL = imageURL;
     this.price = price;
     this.description = description;
+    this.weight = weight;
+    this.descriptionOfCategory = descriptionOfCategory;
+    this.nameOfSupplier = nameOfSupplier;
   }
 }
