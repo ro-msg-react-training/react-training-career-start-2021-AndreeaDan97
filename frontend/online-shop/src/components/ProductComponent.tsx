@@ -28,7 +28,7 @@ function ProductComponent(props: ProductDetailsInterface) {
     <Card className={classes.customCard}>
       <CardHeader
         title={props.currentProduct.name}
-        subheader={props.currentProduct.price + " EUR"}
+        subheader={props.currentProduct.price + " LEI"}
       />
       <CardMedia
         style={{ padding: "110px" }}

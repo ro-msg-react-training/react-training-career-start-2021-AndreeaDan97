@@ -1,6 +1,6 @@
 import { createMuiTheme } from "@material-ui/core/styles";
 
-const googleFont = "'Quicksand', sans-serif";
+// const googleFont = "'Quicksand', sans-serif";
 
 const theme = createMuiTheme({
   palette: {
@@ -19,7 +19,7 @@ const theme = createMuiTheme({
     },
   },
   typography: {
-    fontFamily: googleFont,
+    fontFamily: "'Quicksand', sans-serif",
     fontSize: 18,
   },
   shape: {

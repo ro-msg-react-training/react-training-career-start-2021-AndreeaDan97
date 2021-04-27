@@ -32,18 +32,28 @@ function ProductDetails(props: any) {
   const classes = useStyles();
   const params = useParams();
   // return (<h1>Hello {(params as any).productId} and {product.name}</h1>)
-  const product = props.location.state.currentProduct;
+  // const product = props.location.state.currentProduct;
 
   var productService = new ProductService();
-  let prod: Product = new Product(1, "a", "a", "a", 1, "a", 1, "a", "a");
+  let prod: Product = new Product(
+    0,
+    "not defined",
+    "not defined",
+    "not defined",
+    0,
+    "not defined",
+    0,
+    "not defined",
+    "not defined"
+  );
   const [data, setData] = useState(prod);
+
   React.useEffect(() => {
     productService.getProductById((params as any).productId).then((res) => {
       console.log(res.data);
       setData(res.data);
     });
   }, []);
-  console.log(data.name);
 
   return (
     <Grid container className={classes.customGrid}>
@@ -59,13 +69,21 @@ function ProductDetails(props: any) {
             <Typography className={classes.customText}>
               Technical Specifications:
             </Typography>
-            <Typography>Tip faina: {data.description}</Typography>
-            <Typography>Gramaj: {data.weight} grame</Typography>
-            <Typography>Categorie: {data.nameOfCategory}</Typography>
             <Typography>
-              Descriere categorie: {data.descriptionOfCategory}
+              <strong>Tip faina:</strong> {data.description}
             </Typography>
-            <Typography>Furnizor: {data.nameOfSupplier}</Typography>
+            <Typography>
+              <strong>Gramaj:</strong> {data.weight} grame
+            </Typography>
+            <Typography>
+              <strong>Categorie:</strong> {data.nameOfCategory}
+            </Typography>
+            <Typography>
+              <strong>Descriere categorie:</strong> {data.descriptionOfCategory}
+            </Typography>
+            <Typography>
+              <strong>Furnizor:</strong> {data.nameOfSupplier}
+            </Typography>
             <Button
               component={Link}
               to={{ pathname: `/products`, state: { data } }}
