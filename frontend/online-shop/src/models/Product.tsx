@@ -1,5 +1,3 @@
-import React from "react";
-
 export default class Product {
   id: number;
   name: string;

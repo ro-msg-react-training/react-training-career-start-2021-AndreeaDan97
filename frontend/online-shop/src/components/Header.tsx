@@ -1,25 +1,10 @@
 import { AppBar, Button, Toolbar, Typography } from "@material-ui/core";
-import { makeStyles } from "@material-ui/core/styles";
 import ShopIcon from "@material-ui/icons/Shop";
-import { Link, NavLink } from "react-router-dom";
-
-const useStyles = makeStyles((theme) => ({
-  customButton: {
-    position: "relative",
-    left: 50,
-    fontWeight: "bold",
-    color: "white",
-  },
-  customLoginButton: {
-    position: "relative",
-    left: 940,
-    fontWeight: "bold",
-    color: "white",
-  },
-}));
+import { NavLink } from "react-router-dom";
+import { headerStyle } from "../styles/Header.styles";
 
 const Header = () => {
-  const styleClass = useStyles();
+  const styleClass = headerStyle();
   return (
     <AppBar position="static">
       <Toolbar>

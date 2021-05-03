@@ -1,5 +1,3 @@
-import React from "react";
-import Product from "../models/Product";
 import InfoIcon from "@material-ui/icons/Info";
 import Card from "@material-ui/core/Card";
 import CardHeader from "@material-ui/core/CardHeader";
@@ -7,22 +5,12 @@ import CardMedia from "@material-ui/core/CardMedia";
 import CardContent from "@material-ui/core/CardContent";
 import { Link } from "react-router-dom";
 import { Button } from "@material-ui/core";
-import { makeStyles } from "@material-ui/core/styles";
-
-const useStyles = makeStyles((theme) => ({
-  customCard: {
-    borderStyle: "outset",
-    borderWidth: 2,
-    borderRadius: 15,
-  },
-}));
-
-export interface ProductDetailsInterface {
-  currentProduct: Product;
-}
+import DeleteIcon from "@material-ui/icons/Delete";
+import { ProductDetailsInterface } from "../interfaces/ProductDetailsInterface";
+import { productComponentStyle } from "../styles/ProductComponent.styles";
 
 function ProductComponent(props: ProductDetailsInterface) {
-  const classes = useStyles();
+  const classes = productComponentStyle();
   const currentProduct = props.currentProduct;
   return (
     <Card className={classes.customCard}>
@@ -44,6 +32,11 @@ function ProductComponent(props: ProductDetailsInterface) {
           }}
         >
           <InfoIcon></InfoIcon>
+        </Button>
+        <Button
+          onClick={() => props.deleteProductFunc(props.currentProduct.id)}
+        >
+          <DeleteIcon></DeleteIcon>
         </Button>
       </CardContent>
     </Card>
