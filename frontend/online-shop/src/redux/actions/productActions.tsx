@@ -1,3 +1,4 @@
+import Product from "../../models/Product";
 import ProductService from "../../services/ProductService";
 import * as types from "./actionTypes";
 
@@ -39,6 +40,30 @@ export function deleteProductById(id: number) {
       dispatch({
         type: types.DELETE_PRODUCT,
         idOfDeletedProduct: id,
+      })
+    );
+  };
+}
+
+export function addProduct(product: Product) {
+  console.log("In addProduct function from productActions...");
+  return function (dispatch: any) {
+    productService.insertNewProduct(product).then((prod) =>
+      dispatch({
+        type: types.ADD_PRODUCT,
+        newProduct: prod.data,
+      })
+    );
+  };
+}
+
+export function updateProductById(id: number, product: Product) {
+  console.log("In updateProductById function from productActions...");
+  return function (dispatch: any) {
+    productService.updateProductById(id, product).then((updatedProd) =>
+      dispatch({
+        type: types.UPDATE_PRODUCT,
+        updatedProduct: updatedProd.data,
       })
     );
   };

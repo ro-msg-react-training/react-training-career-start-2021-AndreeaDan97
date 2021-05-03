@@ -34,9 +34,8 @@ const UpdateForm = (props: any) => {
       .updateProductById(dataReceived.id, product)
       .then((product) => {
         console.log(product.data);
+        alert("The product was updated!");
       });
-
-    alert("The product was updated!");
   };
 
   const onSubmit = (e: any) => {

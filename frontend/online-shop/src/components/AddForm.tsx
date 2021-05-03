@@ -1,6 +1,7 @@
 import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import Product from "../models/Product";
-import ProductService from "../services/ProductService";
+import { addProduct } from "../redux/actions/productActions";
 
 const AddForm = () => {
   const [name, setName] = useState("");
@@ -12,7 +13,8 @@ const AddForm = () => {
   const [descCategory, setDescCategory] = useState("");
   const [supplier, setSupplier] = useState("");
 
-  const productService = new ProductService();
+  const dispatch = useDispatch();
+  const data = useSelector((state: any) => state.productReducer.shopProduct);
 
   const addTask = () => {
     const product: Product = new Product(
@@ -27,10 +29,9 @@ const AddForm = () => {
       supplier
     );
 
-    productService.insertNewProduct(product).then((product) => {
-      console.log(product.data);
-      alert("The product was added!");
-    });
+    const addNewProduct = addProduct(product);
+    addNewProduct(dispatch);
+    console.log(data.name);
   };
 
   const returnToInputInitialState = () => {

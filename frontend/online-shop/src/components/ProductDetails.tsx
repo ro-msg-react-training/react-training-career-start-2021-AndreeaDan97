@@ -68,9 +68,6 @@ function ProductDetails(props: any) {
               <Typography>
                 <strong>Furnizor:</strong> {data.nameOfSupplier}
               </Typography>
-              <Button component={Link} to={{ pathname: `/products` }}>
-                <ShoppingCartIcon></ShoppingCartIcon>
-              </Button>
               <Button onClick={() => deleteProduct((params as any).productId)}>
                 <DeleteIcon></DeleteIcon>
               </Button>
@@ -82,6 +79,9 @@ function ProductDetails(props: any) {
                 }}
               >
                 <EditIcon></EditIcon>
+              </Button>
+              <Button component={Link} to={{ pathname: `/products` }}>
+                <ShoppingCartIcon></ShoppingCartIcon>
               </Button>
             </CardContent>
           </Card>

@@ -1,7 +1,8 @@
+import Order from "../../models/Order";
 import * as types from "../actions/actionTypes";
 
 const initialState = {
-  order: [],
+  order: Order,
 };
 
 export default function productReducer(state = initialState, action: any) {

@@ -28,6 +28,18 @@ export default function productReducer(state = initialState, action: any) {
           (index) => index !== action.idOfDeletedProduct
         ),
       };
+    case types.ADD_PRODUCT:
+      console.log("In ADD_ORDER from productReducer...");
+      return {
+        ...state,
+        shopProduct: action.newProduct,
+      };
+    case types.UPDATE_PRODUCT:
+      console.log("In UPDATE_PRODUCT from productReducer...");
+      return {
+        ...state,
+        shopProduct: action.updatedProduct,
+      };
     default:
       return state;
   }
