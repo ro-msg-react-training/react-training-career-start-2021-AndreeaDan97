@@ -11,28 +11,3 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-
-/* temporary css files for styling the update and add forms */
-
-.btn {
-  display: inline-block;
-  background: #000;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  margin: 5px;
-  cursor: pointer;
-  border-radius: 5px;
-  text-decoration: none;
-  font-size: 15px;
-  font-family: inherit;
-}
-
-.btn-block {
-  display: block;
-  width: 25%;
-}
-
-.form-control {
-  margin: 20px 0;
-}

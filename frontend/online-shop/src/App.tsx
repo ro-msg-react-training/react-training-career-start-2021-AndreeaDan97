@@ -8,7 +8,7 @@ import {
 import Header from "./components/Header";
 import ProductDetails from "./components/ProductDetails";
 import PageNotFound from "./components/PageNotFound";
-import { ThemeProvider } from "@material-ui/core";
+import { CssBaseline, ThemeProvider } from "@material-ui/core";
 import theme from "./theme";
 import Footer from "./components/Footer";
 import { Provider as ReduxProvider } from "react-redux";
@@ -22,24 +22,29 @@ function App() {
   return (
     <ReduxProvider store={store}>
       <ThemeProvider theme={theme}>
-        <Router>
-          <Header />
-          <Switch>
-            <Route exact path="/" component={ProductList} />
-            <Route exact path="/products">
-              <Redirect to="/" />
-            </Route>
-            <Route path="/products/add" component={AddForm} />
-            <Route
-              exact
-              path="/products/:productId"
-              component={ProductDetails}
-            />
-            <Route path="/products/:productId/update" component={UpdateForm} />
-            <Route component={PageNotFound} />
-          </Switch>
-        </Router>
-        <Footer />
+        <CssBaseline>
+          <Router>
+            <Header />
+            <Switch>
+              <Route exact path="/" component={ProductList} />
+              <Route exact path="/products">
+                <Redirect to="/" />
+              </Route>
+              <Route path="/products/add" component={AddForm} />
+              <Route
+                exact
+                path="/products/:productId"
+                component={ProductDetails}
+              />
+              <Route
+                path="/products/:productId/update"
+                component={UpdateForm}
+              />
+              <Route component={PageNotFound} />
+            </Switch>
+          </Router>
+          <Footer />
+        </CssBaseline>
       </ThemeProvider>
     </ReduxProvider>
   );

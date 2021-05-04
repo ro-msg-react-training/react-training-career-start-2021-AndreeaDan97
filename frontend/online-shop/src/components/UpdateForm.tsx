@@ -1,8 +1,11 @@
 import { useState } from "react";
 import Product from "../models/Product";
 import ProductService from "../services/ProductService";
+import { formStyle } from "../styles/Form.styles";
 
 const UpdateForm = (props: any) => {
+  const classes = formStyle();
+
   const dataReceived = props.location.state.data;
   const [name, setName] = useState(dataReceived.name);
   const [price, setPrice] = useState(dataReceived.price);
@@ -44,8 +47,8 @@ const UpdateForm = (props: any) => {
   };
 
   return (
-    <form className="add-form" onSubmit={onSubmit}>
-      <div className="form-control">
+    <form className={classes.customForm} onSubmit={onSubmit}>
+      <div className={classes.customFormControl}>
         <label>Produs: </label>
         <input
           type="text"
@@ -54,7 +57,7 @@ const UpdateForm = (props: any) => {
           onChange={(e) => setName(e.target.value)}
         ></input>
       </div>
-      <div className="form-control">
+      <div className={classes.customFormControl}>
         <label>Pret: </label>
         <input
           type="number"
@@ -63,7 +66,7 @@ const UpdateForm = (props: any) => {
           onChange={(e) => setPrice(e.target.valueAsNumber)}
         ></input>
       </div>
-      <div className="form-control">
+      <div className={classes.customFormControl}>
         <label>ImageURL: </label>
         <input
           type="text"
@@ -72,7 +75,7 @@ const UpdateForm = (props: any) => {
           onChange={(e) => setImageURL(e.target.value)}
         ></input>
       </div>
-      <div className="form-control">
+      <div className={classes.customFormControl}>
         <label>Tip faina: </label>
         <input
           type="text"
@@ -81,7 +84,7 @@ const UpdateForm = (props: any) => {
           onChange={(e) => setDescription(e.target.value)}
         ></input>
       </div>
-      <div className="form-control">
+      <div className={classes.customFormControl}>
         <label>Gramaj: </label>
         <input
           type="number"
@@ -90,7 +93,7 @@ const UpdateForm = (props: any) => {
           onChange={(e) => setWeight(e.target.value)}
         ></input>
       </div>
-      <div className="form-control">
+      <div className={classes.customFormControl}>
         <label>Categorie: </label>
         <input
           type="text"
@@ -99,7 +102,7 @@ const UpdateForm = (props: any) => {
           onChange={(e) => setCategory(e.target.value)}
         ></input>
       </div>
-      <div className="form-control">
+      <div className={classes.customFormControl}>
         <label>Furnizor: </label>
         <input
           type="text"
@@ -109,7 +112,11 @@ const UpdateForm = (props: any) => {
         ></input>
       </div>
 
-      <input type="submit" value="Update product" className="btn btn-block" />
+      <input
+        type="submit"
+        value="Update product"
+        className={classes.customButton}
+      />
     </form>
   );
 };

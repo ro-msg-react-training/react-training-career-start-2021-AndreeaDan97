@@ -2,8 +2,11 @@ import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Product from "../models/Product";
 import { addProduct } from "../redux/actions/productActions";
+import { formStyle } from "../styles/Form.styles";
 
 const AddForm = () => {
+  const classes = formStyle();
+
   const [name, setName] = useState("");
   const [price, setPrice] = useState(0);
   const [imageURL, setImageURL] = useState("");
@@ -57,8 +60,8 @@ const AddForm = () => {
   };
 
   return (
-    <form className="add-form" onSubmit={onSubmit}>
-      <div className="form-control">
+    <form className={classes.customForm} onSubmit={onSubmit}>
+      <div className={classes.customFormControl}>
         <label>Produs: </label>
         <input
           type="text"
@@ -67,7 +70,7 @@ const AddForm = () => {
           onChange={(e) => setName(e.target.value)}
         ></input>
       </div>
-      <div className="form-control">
+      <div className={classes.customFormControl}>
         <label>Pret: </label>
         <input
           type="number"
@@ -76,7 +79,7 @@ const AddForm = () => {
           onChange={(e) => setPrice(e.target.valueAsNumber)}
         ></input>
       </div>
-      <div className="form-control">
+      <div className={classes.customFormControl}>
         <label>ImageURL: </label>
         <input
           type="text"
@@ -85,7 +88,7 @@ const AddForm = () => {
           onChange={(e) => setImageURL(e.target.value)}
         ></input>
       </div>
-      <div className="form-control">
+      <div className={classes.customFormControl}>
         <label>Tip faina: </label>
         <input
           type="text"
@@ -94,7 +97,7 @@ const AddForm = () => {
           onChange={(e) => setDescription(e.target.value)}
         ></input>
       </div>
-      <div className="form-control">
+      <div className={classes.customFormControl}>
         <label>Gramaj: </label>
         <input
           type="number"
@@ -103,7 +106,7 @@ const AddForm = () => {
           onChange={(e) => setWeight(e.target.valueAsNumber)}
         ></input>
       </div>
-      <div className="form-control">
+      <div className={classes.customFormControl}>
         <label>Categorie: </label>
         <input
           type="text"
@@ -112,7 +115,7 @@ const AddForm = () => {
           onChange={(e) => setCategory(e.target.value)}
         ></input>
       </div>
-      <div className="form-control">
+      <div className={classes.customFormControl}>
         <label>Furnizor: </label>
         <input
           type="text"
@@ -122,7 +125,11 @@ const AddForm = () => {
         ></input>
       </div>
 
-      <input type="submit" value="Add product" className="btn btn-block" />
+      <input
+        type="submit"
+        value="Add product"
+        className={classes.customButton}
+      />
     </form>
   );
 };
